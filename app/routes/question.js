@@ -13,6 +13,7 @@ export default Ember.Route.extend({
       });
       question.save();
       this.refresh();
+
     },
     destroyQuestion(question) {
       question.destroyRecord();

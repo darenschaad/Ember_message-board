@@ -4,16 +4,16 @@
       <form>
         <div class="form-group">
           <label for="content">Answer</label>
-          {{input value=content id="content"}}
+          {{textarea rows="2" cols="80" value=content id="content"}}
         </div>
         <div class="form-group">
           <label for="author">Author</label>
-          {{input value=author id="author"}}
+          {{textarea rows="2" cols="80" value=author id="author"}}
         </div>
 
-        <button {{action 'save'}}>Save</button>
+        <button class="btn btn-primary" {{action 'save'}}>Save</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'answerFormShow'}}>New Answer</button>
+    <button class="btn btn-primary" {{action 'answerFormShow'}}>New Answer</button>
 {{/if}}

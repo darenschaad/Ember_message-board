@@ -1,9 +1,18 @@
 .jumbotron {
   text-align: center;
   /*background-color: white;*/
-  /*background-image: url("");*/
+  background-image: url("http://messersmith.name/wordpress/wp-content/uploads/2009/04/stormy_morning_panorama_web.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-shadow: 1px 1px 1px white;
   font-family: 'Bree Serif', serif;
+}
+
+.grey {
+  color: grey;
+  padding-left: 10px;
+}
+
+nav {
+  margin-top: -30px;
 }
