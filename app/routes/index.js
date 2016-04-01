@@ -6,10 +6,6 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    destroyQuestion(question) {
-      question.destroyRecord();
-      this.refresh();
-    },
     save(params) {
       var newQuestion = this.store.createRecord('question', params);
       newQuestion.save();
