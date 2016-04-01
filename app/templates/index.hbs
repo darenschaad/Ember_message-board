@@ -1,7 +1,7 @@
 <h1>Questions:</h1>
 
-  {{#each model as |question|}}
-    {{question-tile question=question destroyQuestion="destroyQuestion"}}
+  {{#each model.questions as |question|}}
+    {{question-tile question=question}}
   {{/each}}
 
 {{new-question save="save"}}

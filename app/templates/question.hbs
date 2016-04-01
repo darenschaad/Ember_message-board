@@ -1,5 +1,13 @@
-<h2>More information about {{model.content}} {{model.notes}}</h2>
 
-{{update-question question=model update="update"}}
+
 
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
+{{update-question question=model update="update"}}
+
+<h3>Answers</h3>
+<ul>
+  {{#each model.answers as |answer|}}
+  <li>{{answer.content}} - <span>{{answer.author}}</span></li>
+  {{/each}}
+</ul>
+{{new-answer saveAnswer="saveAnswer" question=model}}

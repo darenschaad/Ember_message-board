@@ -10,5 +10,12 @@
     "content": "How much do cars weigh?",
     "author": "Kevin Brown",
     "notes": "How about a kia optima?"
-  }]
+  }],
+  "answers": [{
+    "content": "Answer1",
+    "author": "Daren"
+  }, {
+    "content": "Answer2",
+    "author": "Daren2"
+    }]
 }
