@@ -1,0 +1,9 @@
+.jumbotron {
+  text-align: center;
+  /*background-color: white;*/
+  /*background-image: url("");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 1px 1px 1px white;
+  font-family: 'Bree Serif', serif;
+}
