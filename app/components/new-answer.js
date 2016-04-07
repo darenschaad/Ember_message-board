@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       this.set('addNewAnswer', true);
     },
     save() {
-      var date = new Date()
+      var date = new Date();
       var params = {
         content: this.get('content'),
         author: this.get('author'),

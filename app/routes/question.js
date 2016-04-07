@@ -1,6 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
+  //change this to RSVP
+
+  //question:
+  //categories: findAll('')
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },

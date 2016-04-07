@@ -7,7 +7,7 @@
 <h3>Answers</h3>
 <ol>
   {{#each model.answers as |answer|}}
-  <li>{{answer.content}} - <span class="grey">Submitted by: {{answer.author}}</span></li>
+  <li>{{answer.content}} - <span class="grey">Submitted by: {{answer.author}} ({{moment-from-now answer.time}})</span></li>
   {{/each}}
 </ol>
 {{new-answer saveAnswer="saveAnswer" question=model}}

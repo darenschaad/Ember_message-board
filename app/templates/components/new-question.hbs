@@ -13,6 +13,17 @@
         <label for="notes">Notes</label>
         {{textarea rows="2" cols="80" value=notes id="notes"}}
       </div>
+
+
+
+      {{#x-select value=category}}
+      {{#each model.categories as |category|}}
+      {{#x-option value=category}}{{category.name}}{{/x-option}}
+      {{/each}}
+
+
+      {{/x-select}}
+      <br>
       <button class="btn btn-primary" {{action 'save' question}}>Submit</button>
     </form>
   </div>

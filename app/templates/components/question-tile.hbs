@@ -1,1 +1,4 @@
-{{#link-to 'question' question.id}}<h3>{{question.content}}</h3><h4>Asked By:  {{question.author}}</h4>{{/link-to}}
+<div class="question">
+
+  {{#link-to 'question' question.id}}<h3>{{question.content}}</h3><h4>Asked By:  {{question.author}}, <span class="date">{{moment-from-now question.time}}</span></h4>{{/link-to}}
+</div>

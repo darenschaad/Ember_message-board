@@ -20,3 +20,10 @@ nav {
 .btn {
   margin-bottom: 10px;
 }
+
+.question a:hover{
+  text-decoration: none;
+  color: #211AFF;
+  letter-spacing: 1px;
+  transition: all 200ms ease-in-out;
+}
