@@ -27,3 +27,8 @@ nav {
   letter-spacing: 1px;
   transition: all 200ms ease-in-out;
 }
+
+.date {
+  color: grey;
+  font-size: 80%;
+}
