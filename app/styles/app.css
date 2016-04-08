@@ -21,7 +21,7 @@ nav {
   margin-bottom: 10px;
 }
 
-.question a:hover{
+a:hover{
   text-decoration: none;
   color: #211AFF;
   letter-spacing: 1px;
@@ -31,4 +31,12 @@ nav {
 .date {
   color: grey;
   font-size: 80%;
+}
+
+.center {
+  text-align: center;
+}
+
+.fire {
+  color: red;
 }
