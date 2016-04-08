@@ -7,9 +7,9 @@
           {{input value=name id="name"}}
         </div>
 
-        <button {{action 'save'}}>Save Category</button>
+        <button class="btn btn-primary" {{action 'save'}}>Save Category</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'categoryFormShow'}}>New Category</button>
+    <button class="btn btn-primary" {{action 'categoryFormShow'}}>New Category</button>
 {{/if}}

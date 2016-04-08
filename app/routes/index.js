@@ -8,6 +8,9 @@ export default Ember.Route.extend({
       categories: this.store.findAll('category'),
     });
   },
+  // 
+  // sortBy: ['content:asc'],
+  // sortedQuestions: Ember.computed.sort('model.questions', 'sortBy'),
 
   actions: {
     save(params) {
@@ -15,7 +18,7 @@ export default Ember.Route.extend({
       var category = params.category;
       category.get('questions').addObject(newQuestion);
       newQuestion.save().then(function() {
-        return category.save()
+        return category.save();
       });
       this.transitionTo('index');
     }

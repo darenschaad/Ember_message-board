@@ -17,6 +17,14 @@
           {{textarea rows="2" cols="80" value=notes id="notes" value=question.notes}}
         </div>
 
+        <div class="form-group select">
+          {{#x-select value=category}}
+          {{#each model.categories as |category|}}
+          {{#x-option value=category}}{{category.name}}{{/x-option}}
+          {{/each}}
+          {{/x-select}}
+        </div>
+
         <button class="btn btn-success" {{action 'update' question}}>Update</button>
       </form>
     </div>

@@ -4,10 +4,5 @@
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
 {{update-question question=model update="update"}}
 
-<h3>Answers</h3>
-<ol>
-  {{#each model.answers as |answer|}}
-  <li>{{answer.content}} - <span class="grey">Submitted by: {{answer.author}} ({{moment-from-now answer.time}})</span></li>
-  {{/each}}
-</ol>
+
 {{new-answer saveAnswer="saveAnswer" question=model}}

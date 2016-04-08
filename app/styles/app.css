@@ -40,3 +40,12 @@ a:hover{
 .fire {
   color: red;
 }
+
+body {
+  margin-bottom: 200px;
+}
+
+.select {
+
+   height: 50px;
+}
