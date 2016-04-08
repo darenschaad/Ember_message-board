@@ -1,5 +1,8 @@
 <div class="question">
 
-  {{#link-to 'question' question.id}}<h3>{{question.content}}</h3><h4>Asked By:  {{question.author}}, <span class="date">({{moment-from-now question.time}})</span></h4>
+  {{#link-to 'question' question.id}}
+  <h3>{{question.content}}</h3>
+  <h4>Asked By:  {{question.author}}, <span class="date">({{moment-from-now question.time}})</span></h4>
   <h4>Category: {{question.category.name}}</h4> {{/link-to}}
+  <button class="btn btn-info" {{action 'addToFavorites' question}}>Add To Favorites</button>
 </div>
