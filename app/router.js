@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('question', {path: '/question/:question_id'});
   this.route('answer', {path: '/answer/:answer_id'});
   this.route('category');
+  this.route('categoryLinks', {path: '/categoryLinks/:category_id'});
 });
 
 export default Router;
