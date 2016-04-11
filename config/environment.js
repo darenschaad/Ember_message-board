@@ -52,7 +52,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.baseURL = '/Ember_message-board'
-  },
+  }
 
   return ENV;
 };

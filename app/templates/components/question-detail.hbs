@@ -1,8 +1,8 @@
-<h2>{{question.content}}</h2>
-<h3>Asked By: {{question.author}}</h3>
-<h4>Notes: {{question.notes}}</h4>
-<h4>Category: {{question.category.name}}</h4>
-
+<h2>{{model.question.content}}</h2>
+<h3>Asked By: {{model.question.author}}</h3>
+<h4>Notes: {{model.question.notes}}</h4>
+<h4>Category: {{model.question.category.name}}</h4>
+<h5><span class="date">({{moment-from-now model.question.time}})</span></h5>
 <h3>Answers</h3>
 <ol>
   {{#each sortedAnswers as |answer|}}
@@ -10,4 +10,4 @@
   {{/each}}
 </ol>
 
-<button class="btn btn-danger" {{action 'delete' question}}>Delete Question</button>
+<button class="btn btn-danger" {{action 'delete' model.question}}>Delete Question</button>

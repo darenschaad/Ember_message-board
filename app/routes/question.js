@@ -1,16 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // model() {
-  //   return Ember.RSVP.hash({
-  //     question: this.store.findRecord('question', params.question_id),
-  //     categories: this.store.findAll('category'),
-  //   });
-  // },
-  //change this to RSVP
   model(params) {
-    return this.store.findRecord('question', params.question_id);
+    return Ember.RSVP.hash({
+      question: this.store.findRecord('question', params.question_id),
+      categories: this.store.findAll('category'),
+    });
   },
+  //change this to RSVP
+  // model(params) {
+  //   return this.store.findRecord('question', params.question_id);
+  // },
   actions: {
     update(question, params) {
       Object.keys(params).forEach(function(key) {
@@ -29,11 +29,12 @@ export default Ember.Route.extend({
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
+      console.log(question);
       question.get('answers').addObject(newAnswer);
       newAnswer.save().then(function() {
         return question.save();
       });
-      this.transitionTo('question', params.question);
+      
     }
   }
 });

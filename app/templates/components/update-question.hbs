@@ -4,28 +4,20 @@
       <form>
         <div class="form-group">
           <label for="content">Question</label>
-          {{textarea rows="3" cols="80" value=content id="content" value=question.content}}
+          {{textarea rows="3" cols="80" value=content id="content" value=model.question.content}}
         </div>
 
         <div class="form-group">
           <label for="author">Author</label>
-          {{textarea cols="80" value=author id="author" value=question.author}}
+          {{textarea cols="80" value=author id="author" value=model.question.author}}
         </div>
 
         <div class="form-group">
           <label for="notes">Notes</label>
-          {{textarea rows="2" cols="80" value=notes id="notes" value=question.notes}}
+          {{textarea rows="2" cols="80" value=notes id="notes" value=model.question.notes}}
         </div>
 
-        <div class="form-group select">
-          {{#x-select value=category}}
-          {{#each model.categories as |category|}}
-          {{#x-option value=category}}{{category.name}}{{/x-option}}
-          {{/each}}
-          {{/x-select}}
-        </div>
-
-        <button class="btn btn-success" {{action 'update' question}}>Update</button>
+        <button class="btn btn-success" {{action 'update' model.question}}>Update</button>
       </form>
     </div>
 {{else}}
