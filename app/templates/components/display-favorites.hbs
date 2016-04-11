@@ -1,8 +1,0 @@
-<h2>Favorite Questions:</h2>
-<ul>
-  {{#each favorite.questions as |question|}}
-  {{#link-to 'question' question.id}}<li>
-    <h3><span class="fire">{{question-popularity question}}</span>{{question.content}}</h3>
-  </li>{{/link-to}}
-  {{/each}}
-</ul>
